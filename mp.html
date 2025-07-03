@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manasa Lakshmi | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="mp.css" />
   <style>
     .skills .card-grid {
@@ -103,7 +104,7 @@
     .contact-footer a:hover {
       text-decoration: underline;
     }
-    </style>
+  </style>
 </head>
 <body>
   <header>
@@ -124,7 +125,6 @@
     <section class="card">
       <h2>Welcome to My Portfolio</h2>
       <p>I build smart solutions using AI, ML, and Web Development. Check out my work, skills, and journey!</p>
-      <!-- <button id="theme-toggle">Toggle Dark Mode</button> -->
     </section>
 
     <section class="projects card">
@@ -207,9 +207,11 @@
 
   <script>
     const toggle = document.getElementById("theme-toggle");
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
+    if (toggle) {
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+      });
+    }
   </script>
 </body>
 </html>
