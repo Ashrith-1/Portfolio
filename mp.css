@@ -5,19 +5,29 @@
   box-sizing: border-box;
 }
 
+.card, header, footer {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+}
+
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f7fa;
-  color: #333;
-  line-height: 1.6;
+  background: url('b11.jpg') repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
 }
 
 /* Header */
 header {
   position: relative;
-  background: linear-gradient(to right, #4b6cb7, #182848);
+  background-image: url("b.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
   color: white;
-  padding: 2rem 1rem 4rem;
+  padding: 10rem 10rem 4rem;
 }
 
 .info {
@@ -26,11 +36,6 @@ header {
   align-items: center;
   text-align: center;
   margin-bottom: 1.5rem;
-}
-.subtag {
-  font-size: 1.2rem;
-  color: #e2e0db;
-  margin-top: 0.5rem;
 }
 .intro {
   text-align: center;
@@ -73,7 +78,7 @@ main {
 
 /* Cards */
 .card {
-  background: #ffffff;
+  background: #e6f9ff;
   padding: 1.5rem;
   margin-bottom: 2rem;
   border-radius: 12px;

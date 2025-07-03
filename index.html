@@ -53,7 +53,7 @@
       list-style: none;
     }
     .certifications li {
-      background: #eaf2ff;
+      background: #ffffff;
       color: #0c8a7b;
       padding: 0.6rem 1rem;
       border-radius: 30px;
@@ -74,8 +74,8 @@
       list-style: none;
     }
     .extras li {
-      background: #c4e2ff;
-      color: #007a70;
+      background: #5ac4f9;
+      color: #ffffff;
       padding: 0.6rem 1.1rem;
       border-radius: 50px;
       font-weight: 600;
@@ -84,13 +84,16 @@
       transition: 0.3s ease;
     }
     .extras li:hover {
-      background: #8ad8ff;
+      background: #007a70;
       transform: scale(1.05);
     }
     .contact-footer p {
-      background: linear-gradient(to right, #4b6cb7, #182848);
+      background: linear-gradient(to right, #57a2cd, #1d6a8d);
       color: white;
       padding: 0.8rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-radius: 12px;
       margin-bottom: 1rem;
       font-weight: 500;
@@ -109,7 +112,7 @@
 <body>
   <header>
    <div class="info">
-     <h1 class="name">Hi, I'm Manasa Lakshmi</h1>
+     <h1>Hi, I'm Manasa Lakshmi</h1>
     <p>Aspiring AI/ML Engineer & Computer Science Student</p>
    </div>
     <nav class="contact">
@@ -117,7 +120,8 @@
       <a href="tel:+918978595744">Phone</a>
       <a href="https://linkedin.com/in/manasa-lakshmi-pusuluru-92ba18257" target="_blank">LinkedIn</a>
       <a href="https://github.com/manasa5i3" target="_blank">GitHub</a>
-      <a href="Manasa-Lakshmi-Pusuluru-FlowCV-Resume-20250703 (2).pdf" download>Resume</a>
+      <a href="Pusuluru-Manasa-Lakshmi-Resume.pdf" target="_blank" class="button">Resume</a>
+
     </nav>
   </header>
 
@@ -195,7 +199,7 @@
 
     <section class="contact-footer card">
       <h2>Let's Connect</h2>
-      <p style="background-color: #015c5dfb;">Email: <a href="mailto:manasalakshmi.pusuluru@gmail.com">manasalakshmi.pusuluru@gmail.com</a></p>
+      <p>Email: <a href="mailto:manasalakshmi.pusuluru@gmail.com">manasalakshmi.pusuluru@gmail.com</a></p>
       <p>Phone: <a href="tel:+918978595744">+91 89785 95744</a></p>
       <p>Location: Eluru, Andhra Pradesh</p>
     </section>
@@ -204,14 +208,5 @@
   <footer>
     <p>&copy; 2025 Manasa Lakshmi.</p>
   </footer>
-
-  <script>
-    const toggle = document.getElementById("theme-toggle");
-    if (toggle) {
-      toggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-      });
-    }
-  </script>
 </body>
 </html>
