@@ -1,62 +1,175 @@
-/* Reset & Base */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f5f7fa;
   color: #333;
   line-height: 1.6;
 }
 
 /* Header */
 header {
+  position: relative;
   background: linear-gradient(to right, #4b6cb7, #182848);
   color: white;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 4rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
-header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-}
-header p {
+.subtag {
   font-size: 1.2rem;
-  font-weight: 300;
+  color: #e2e0db;
+  margin-top: 0.5rem;
 }
+.intro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav.contact {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
 nav.contact a {
-  color: #ffdd57;
-  margin: 0 12px;
+  color: #e2e0db;
   font-weight: 600;
   text-decoration: none;
 }
+
 nav.contact a:hover {
   text-decoration: underline;
+  /* color:gold; */
+  transform: scale(1.1);
 }
+
+
 
 /* Main */
 main {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 2rem auto;
-  padding: 1rem;
-}
-section {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-}
-section h2 {
-  color: #4b6cb7;
-  margin-bottom: 1rem;
-  border-left: 5px solid #4b6cb7;
-  padding-left: 10px;
+  padding: 0 1rem;
 }
 
-/* Hero Button */
+/* Cards */
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+.card h2, .card h3 {
+  color: #4b6cb7;
+}
+
+/* Grid in Skills */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Project Cards Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.2rem;
+  
+}
+.card-grid .card {
+  background-color: #f0f4ff;
+  border-left: 5px solid #4b6cb7;
+  text-decoration: none;
+  color: #333;
+  
+}
+.card-grid .card h3 {
+  margin-bottom: 0.3rem;
+}
+.card-grid .card:hover {
+  background-color: #e1eaff;
+}
+
+/* Lists */
+ul {
+  list-style: square inside;
+  padding-left: 1rem;
+}
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1d1d1d;
+  color: #eee;
+  font-size: 0.9rem;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #1c1c1c;
+  color: #eee;
+}
+.dark-mode header {
+  background: linear-gradient(to right, #121212, #2b2b2b);
+}
+.dark-mode .card {
+  background: #2b2b2b;
+  color: #eee;
+}
+.dark-mode .card h2, .dark-mode .card h3 {
+  color: #ffcd3c;
+}
+.dark-mode nav.contact a {
+  color: #ffcd3c;
+}
+.dark-mode footer {
+  background: #111;
+}
+.dark-mode .card-grid .card {
+  background-color: #353535;
+  border-left-color: #ffcd3c;
+}
+.dark-mode .card-grid .card:hover {
+  background-color: #3f3f3f;
+}
+
+/* Theme Toggle Button */
 #theme-toggle {
   margin-top: 1rem;
   padding: 0.5rem 1.2rem;
@@ -70,58 +183,4 @@ section h2 {
 }
 #theme-toggle:hover {
   background-color: #3550a1;
-}
-
-/* Grid Skills */
-.skills .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-/* Project Cards */
-.projects .card {
-  padding: 1rem;
-  background: #f0f4ff;
-  border-left: 6px solid #4b6cb7;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-}
-.projects .card h3 {
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #222;
-  color: #eee;
-}
-
-/* Dark Mode */
-.dark-mode {
-  background-color: #1e1e1e;
-  color: #f5f5f5;
-}
-.dark-mode header {
-  background: linear-gradient(to right, #111, #333);
-}
-.dark-mode nav.contact a {
-  color: #ffc107;
-}
-.dark-mode section {
-  background: #2a2a2a;
-  box-shadow: none;
-}
-.dark-mode section h2 {
-  color: #ffc107;
-}
-.dark-mode .projects .card {
-  background: #3a3a3a;
-  border-left-color: #ffc107;
-}
-.dark-mode footer {
-  background-color: #000;
 }
